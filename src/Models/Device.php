@@ -14,4 +14,16 @@ class Device implements DeviceInterface {
 
 	private $name = '';
 
+	public function setOS($operating_system) {
+		$this->name = $operating_system;
+	}
+
+	public function getOS() {
+		return $this->name;
+	}
+
+	public function isSecure() {
+			return $this->name;
+	}
+
 }

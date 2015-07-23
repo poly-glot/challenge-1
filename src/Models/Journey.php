@@ -8,6 +8,8 @@ class Journey {
 
 	protected $person;
 
+	protected $startingBalance;
+
 	protected $plan;
 
 	protected $stops = array();

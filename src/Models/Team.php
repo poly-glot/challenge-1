@@ -109,6 +109,6 @@ class Team extends Person implements TeamInterface {
 	/* FIXME: Use Device isSecure() method instead */
 	public function hasSecureDevice()
 	{
-		return ($this->getDevice()->getOs() !== Device::OS_WINDOWS_XP);
+		return ($this->getDevice()->isSecure() !== Device::OS_WINDOWS_XP);
 	}
 }
