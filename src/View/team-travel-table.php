@@ -27,22 +27,36 @@
 						<tr>
 							<td>
 								<span class="name">
-									<?php /* TODO: Print Team Member Full Name */ ?>
+									<?php 
+										/* TODO: Print Team Member Full Name */ 
+										echo $journey->getPerson()->getFirstname() . ' ' . $journey->getPerson()->getLastname();
+									?>
 								</span>
                      		 	<div class="intro small">
-									<?php /* TODO: Print Operating System */ ?>,
-									<?php /* TODO: Print Residence */ ?>
+									<?php 
+										/* TODO: Print Operating System */
+										echo $journey->getPerson()->getDevice()->getOS();
+									?>,
+									<?php 
+										/* TODO: Print Residence */ 
+										echo $journey->getPerson()->getResidence();
+									?>
                       			</div>
 							</td>
 							<td><?php echo $journey->getStartingBalance(); ?></td>
 							<td>
 								<div class="small">
-								<?php
-									echo implode(', ', $journey->getPlannedJourney());
-								?>
+									<?php
+										echo implode(', ', $journey->getPlannedJourney());
+									?>
 								</div>
 							</td>
-							<td><?php /* TODO: Print End Balance Here */ ?></td>
+							<td>
+								<?php 
+									/* TODO: Print End Balance Here */ 
+									echo $journey->getBalance(); 
+								?>
+							</td>
 							<td>
 								<?php
 									$note = $journey->getNote();

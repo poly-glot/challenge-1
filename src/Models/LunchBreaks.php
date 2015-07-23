@@ -13,8 +13,13 @@ class LunchBreaks {
 		{
 			if ( ! $journey instanceof MeetupPromotion )
 			{
+				if ($journey->getCurrentCityStop() == 'Abbottabad') {
+					# code...
+					$journey->Charge(100);
+				}
 				continue;
 			}
+
 		}
 	}
 }
